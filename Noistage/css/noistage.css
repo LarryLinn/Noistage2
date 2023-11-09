@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Josefin+Sans&family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #343a40;
+    user-select: none;
+}
+input,button{
+    outline: none;
+}
+body{
+    position: relative;
+}
+.transition{
+    background: linear-gradient(to right,#ffffff, #fffefe);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: all 1s ease;
+}
+.transition.show{
+    width: 0%;
+}
+.maindiv{
+    display: flex;
+    flex-direction: column;
+}
+.maindiv>section{
+    width: 100%;
+}
+.noistagenav{
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    background-color: white;
+}
+.noistagenav>div{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.noistagenav>div>img{
+    max-height: 100%;
+}
+.noistagenav>div>h2{
+    background: linear-gradient(to right,#adb5bd, #343a40);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+    transition: color 1s ease;
+}
+.noistagenav>div:nth-child(2){
+    justify-content: center;
+}
+.noistagenav>div:nth-child(3){
+    justify-content: end;
+    padding: 20px;
+}
+.timer{
+    width: auto;
+    height: 95%;
+    border: 1px solid;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer {
+    font-family: sans-serif;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background: white;
+  }
+  
+  .timer__part {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .timer__btn {
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #8208e6;
+    cursor: pointer;
+  }
+  
+  .timer__btn--start {
+    background: #00b84c;
+  }
+  
+  .timer__btn--stop {
+    background: #ff0256;
+  }
+.tbtn{
+    border: 1px transparent;
+    margin: 10px;
+}
+.tbtn > i{
+    font-size: 20px;
+}
+.musicsection{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 13vh;
+    align-items: center;
+}
+.musicdiv{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.musicimg{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("");
+}
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+.musicimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.musictc{
+    width: 75%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+
+}
+.control{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music_btn{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin: 10px;
+    border: none;
+}
+.playlists::-webkit-scrollbar {
+    display: none;
+}
+.playlists{ 
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: center;
+}
+.playlists div{
+    min-width: 200px;
+    height: 90%;
+    border: 1px transparent;
+    margin: 0px 20px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgb(182, 182, 182);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+.playlists > div>i{
+    font-size: 50px;
+}
+.sounds{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 200px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+.noise{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.noise>i{
+    font-size: 100px;
+}
+.color{
+    color: #001e4d;
+}
+.noise>input{
+    margin: 10px;
+}
+.none{
+    display: none;
+}
+.noise:hover>i{
+    color: #666666;
+}
+.notes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.function{
+    display: flex;
+    flex-direction: row;
+}
+
+#app {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .note {
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    resize: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    outline: none;
+    background: rgb(147, 146, 146);
+    color: white;
+    font-size: 15px;
+  }
+  
+  .add-note {
+    height: 200px;
+    border: none;
+    outline: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .add-note:hover{
+    background-color: rgba(0, 0, 0, 0.332);
+  }
+  .qt {
+    width: 90%;
+    padding: 20px;
+    background-color: rgb(147, 146, 146);
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 15px;
+    display: inline-block;
+    color: white;
+  }
+  .qt2 {
+    padding: 20px;
+    background-color: rgb(147, 146, 146);
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 17px;
+    color: white;
+    display: inline-block;
+  }
+.app{
+    background: #d3cccc;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.app h1{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+    box-shadow: #333;
+}
+.quiz h2{
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9398;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 0px 10px;
+}
+footer div{
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+footer div:nth-child(2){
+    justify-content: end;
+}
+footer div > a{
+    margin: 20px;
+}
+footer div > a:hover{
+    text-decoration: underline;
+}
